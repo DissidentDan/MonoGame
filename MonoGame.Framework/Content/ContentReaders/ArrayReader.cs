@@ -30,7 +30,7 @@ using Microsoft.Xna.Framework.Utilities;
 
 namespace Microsoft.Xna.Framework.Content
 {
-    internal class ArrayReader<T> : ContentTypeReader<T[]>
+    public class ArrayReader<T> : ContentTypeReader<T[]>
     {
         ContentTypeReader elementReader;
 

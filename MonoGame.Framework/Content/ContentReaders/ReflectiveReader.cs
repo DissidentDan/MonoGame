@@ -11,7 +11,7 @@ using Microsoft.Xna.Framework.Utilities;
 
 namespace Microsoft.Xna.Framework.Content
 {
-    internal class ReflectiveReader<T> : ContentTypeReader
+    public class ReflectiveReader<T> : ContentTypeReader
     {
         delegate void ReadElement(ContentReader input, object parent);
 
@@ -22,7 +22,7 @@ namespace Microsoft.Xna.Framework.Content
         private ContentTypeReader _baseTypeReader;
 
 
-        internal ReflectiveReader() 
+        public ReflectiveReader() 
             : base(typeof(T))
         {
         }
