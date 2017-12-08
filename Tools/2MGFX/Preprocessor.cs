@@ -163,12 +163,12 @@ namespace TwoMGFX
 
             public void handleWarning(Source source, int line, int column, string msg)
             {
-                _output.WriteWarning(GetPath(source), line, column, msg);
+                _output.WriteWarning(source != null ? GetPath(source) : "preprocessor", line, column, msg);
             }
 
             public void handleError(Source source, int line, int column, string msg)
             {
-                _output.WriteError(GetPath(source), line, column, msg);
+                _output.WriteError(source != null ? GetPath(source) : "preprocessor", line, column, msg);
             }
 
             private string GetPath(Source source)
